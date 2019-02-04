@@ -1,0 +1,105 @@
+/* *{
+    margin: 0px;
+    padding: 0px;
+}; */
+body{
+    background-image: url('../images/scroll.jpg');
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-size: cover;
+    font-family: Papyrus,fantasy; 
+}
+h1{
+    text-align: center;
+    font-family: Papyrus,fantasy; 
+    /* color: burlywood; */
+    color: floralwhite;
+}
+h2{
+    margin: 0px;
+}
+.top-deck{
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+}
+.top-image{
+    width: 150px;
+    height: 100px;
+    background-color: lightgrey;
+    background-image: url('../images/hero.jpg');
+    background-position: center;
+    background-size: cover; 
+    border-radius: 12px;
+}
+
+
+
+
+
+.board{
+    display: flex;
+    /* justify-content: space-around; */
+    justify-content: center;
+    align-items: center;
+    height: 30%;
+    width: auto;
+    /* background-color: darkgreen; */
+}
+#startGame{
+    height: 40%;
+    width: 30%;
+    margin: auto 20px;
+    background-image: url(../images/start.gif);
+    background-position: center;
+    background-size: cover; 
+    border-style: none;
+    border-radius: 12px;
+    
+}
+.board ul{
+    list-style-type: none;
+}
+.test{
+    /* display: flex;
+    flex-direction: column; */
+    margin-bottom: 20px;
+}
+.bottom-deck{
+    display: flex; 
+    justify-content: space-around;
+    text-align: center;
+}
+.bottom-image{
+    width: 150px;
+    height: 100px;
+    background-image: url('../images/hero.jpg');
+    background-position: center;
+    background-size: cover; 
+    border-radius: 12px;
+}
+/* .................    buttons ...................... */
+button{
+    height: 30px;
+    width: 50%;
+}
+.attack{
+    border-radius: 12px;
+    background-color: pink;
+    border-style: none;
+    float: left;
+    
+}
+.attack:hover {
+    background-color: red; /* Green */
+    color: white;
+  }
+.heal{
+    border-radius: 12px;
+    background-color: lightgreen;
+    border-style: none;
+}
+.heal:hover {
+    background-color: green; /* Green */
+    color: white;
+  }
