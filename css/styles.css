@@ -32,15 +32,22 @@ h2{
     background-size: cover; 
     border-radius: 12px;
 }
+.top-image:hover{
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
 
+.attacker {
+    border: 3px solid yellow;
+}
 
-
-
+.receiver {
+    border: 3px solid red;
+}
 
 .board{
     display: flex;
     /* justify-content: space-around; */
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
     height: 30%;
     width: auto;
@@ -55,10 +62,12 @@ h2{
     background-size: cover; 
     border-style: none;
     border-radius: 12px;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
     
 }
 .board ul{
     list-style-type: none;
+    padding-left: 0px; 
 }
 .test{
     /* display: flex;
@@ -93,6 +102,7 @@ button{
 .attack:hover {
     background-color: red; /* Green */
     color: white;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
   }
 .heal{
     border-radius: 12px;
@@ -102,4 +112,5 @@ button{
 .heal:hover {
     background-color: green; /* Green */
     color: white;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
   }
