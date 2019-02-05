@@ -4,13 +4,20 @@ let bottomDeck = []
 //arr imgs
 let topCards = document.querySelector(".top-image");
 let bottomCards = document.querySelector(".bottom-image");
-let heroA = document.querySelector(".heroA");
-let heroB = document.querySelector(".heroB");
-let heroC = document.querySelector(".heroC");
+// let heroA = document.querySelector(".heroA");
+// let heroB = document.querySelector(".heroB");
+// let heroC = document.querySelector(".heroC");
 
-let heroX = document.querySelector(".heroX");
-let heroY = document.querySelector(".heroY");
-let heroZ = document.querySelector(".heroZ");
+// let heroX = document.querySelector(".heroX");
+// let heroY = document.querySelector(".heroY");
+// let heroZ = document.querySelector(".heroZ");
+let heroA = $(".heroA");
+let heroB = $(".heroB");
+let heroC = $(".heroC");
+
+let heroX = $(".heroX");
+let heroY = $(".heroY");
+let heroZ = $(".heroZ");
 
 let start = document.querySelector("#startGame");
 

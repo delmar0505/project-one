@@ -4,16 +4,22 @@ let bottomDeck = []
 //arr imgs
 let topCards = $(".top-image");
 let bottomCards = $(".bottom-image");
-let heroA = $(".heroA");
-let heroB = $(".heroB");
-let heroC = $(".heroC");
 
-let heroX = $(".heroX");
-let heroY = $(".heroY");
-let heroZ = $(".heroZ");
-
+let attacker = $(".attack");
+let healer = $(".heal");
 let start = $("#startGame");
 
+let showTopHp = $(".hpTop")
+let showTopStr = $(".strTop")
+let showTopInt = $(".intTop")
+
+let showBottomHp = $(".hpBottom")
+let showBottomStr = $(".strBottom")
+let showBottomInt = $(".intBottom")
+let vs1 = $(".p1");
+vs1.html('p1: ' + prompt("player 1 enter name")); 
+let vs2 = $(".p2");
+vs2.html(prompt("player 2 enter name") + ' :p2'); 
 
 let randomAttk = ranNum(40, 120)
 function ranNum(min, max) {
@@ -22,7 +28,7 @@ function ranNum(min, max) {
 // start button on click will push() onto deck top/bottom with random heroes 
 
 let warHero = [
-    {name: 'hercules',
+    {name: 'jupiter',
      health: 550,
      strength: 120,
      mana: undefined
@@ -33,6 +39,7 @@ let warHero = [
      mana: 70
     }
 ];
+
 class Hero{
     constructor(name, health, strength, mana, team){
         this.name = name;
@@ -52,11 +59,9 @@ let turn = 0;
 let otherTeam = 0;
 let heroGiving;
 let heroReceiving;
-let attacker = $(".attack");
-let healer = $(".heal");
 let warBoard = [
     [ 
-    new Hero ('Hercules', 800, 85, 75, 1),
+    new Hero ('jupiter', 800, 85, 75, 1),
     new Hero ('Mercury', 500, 120, 80, 1),
     new Hero ('Pluto', 700, 95, 50 ,1)
     ],
@@ -73,11 +78,22 @@ function fight(){
         turn = 0;
     } 
      heroGiving = warBoard[turn][Math.floor(Math.random() * warBoard[turn].length)];
-    $('.top-image, .bottom-image').removeClass('attacker receiver');
+    $('.top-image, .bottom-image').removeClass('attacker receiver receiverhp');
 };
-fight();
+// fight();
 ///Add an event listner on click that says whetther or not that player is attacking or healing...
 // I also need to know who's turn it is. 
+
+// $('showTopHp').innerHTML =  $("Health: " + heroGiving.health);
+// showTopStr 
+// showTopInt
+
+// showBottomHp 
+// showBottomStr 
+// showBottomInt
+
+
+
 
 function attack(){
     if(turn === 0){
@@ -87,11 +103,11 @@ function attack(){
     }
     heroReceiving = warBoard[otherTeam][Math.floor(Math.random() * warBoard[turn].length)]; 
     console.log(heroGiving, ' attacks ',heroReceiving);
-
+    
     $('.' + heroGiving.name).addClass('attacker');
     $('.' + heroReceiving.name).addClass('receiver');
     //console.log($(this).parent())
-}
+};
 function heal(){
     if(turn === 1){
         otherTeam = 1
@@ -102,7 +118,7 @@ function heal(){
     console.log(heroGiving, ' heals ', heroReceiving);
 
     $('.' + heroGiving.name).addClass('attacker');
-    $('.' + heroReceiving.name).addClass('receiver');
+    $('.' + heroReceiving.name).addClass('receiverhp');
 };
 
 attacker.on("click", attack)
