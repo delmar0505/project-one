@@ -1,7 +1,4 @@
-/* *{
-    margin: 0px;
-    padding: 0px;
-}; */
+
 body{
     background-image: url('../images/scroll.jpg');
     background-position: center; 
@@ -51,10 +48,16 @@ h2{
 .top-image:hover{
     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
 }
-
+.heroUl{
+    list-style-type: none;
+    padding-left: 0px;
+}
+.heroUl li{
+    display: inline-block;
+}
 .attacker {
     /* border: 5px solid yellow; */
-    box-shadow: 0 12px 26px 0 rgba(67, 8, 228, 0.9), 0 17px 50px 0 rgba(198, 201, 42, 0.90);
+    box-shadow: 0 20px 26px 0 rgba(67, 8, 228, 0.9), 0 17px 50px 0 rgba(198, 201, 42, 0.90);
 }
 
 .receiver {
@@ -62,6 +65,7 @@ h2{
     border: 5px solid transparent;
     padding: 15px;
     border-image: url(../images/fire.gif) 30 round;
+    
 }
 .receiverhp {
     /* border: 13px solid green; */
@@ -77,13 +81,14 @@ h2{
     justify-content: space-evenly;
     align-items: center;
     height: 30%;
-    width: auto;
+    width: 100%;
     /* background-color: darkgreen; */
 }
 #startGame{
     height: 40%;
-    width: 20%;
-    margin: auto 20px;
+    width: 100%;
+    margin: auto 0px;
+    padding: 0px;
     background-image: url(../images/start.gif);
     background-position: center;
     background-size: cover; 
@@ -94,7 +99,7 @@ h2{
 }
 #startGame:hover{
     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
-    width: 30%;
+    width: 150%;
 }
 .board ul{
     list-style-type: none;
@@ -124,7 +129,7 @@ h2{
 .test{
     /* display: flex;
     flex-direction: column; */
-    margin-bottom: 20px;
+    margin-bottom: 0px;
 }
 .bottom-deck{
     display: flex; 
@@ -146,21 +151,23 @@ h2{
 }
 /* .................    buttons ...................... */
 button{
-    height: 30px;
-    width: 25%;
+    /* height: 30px;
+    width: 25%; */
+    color: white;
 }
 .actionButtons{
     display: flex;
     justify-content: center;
+    flex-direction: column;
     margin: 0px;
+    width: 20%;
 }
 .attack{
     border-radius: 12px;
     background-color: rgba(67, 8, 228, 0.9);
     border-style: none;
+    height: 20%;
     transition: 0.5s;
-    /* float: left; */
-    
 }
 .attack:hover {
     /* background-color: red;  */
@@ -172,6 +179,7 @@ button{
     border-radius: 12px;
     background-color: lightgreen;
     border-style: none;
+    height: 20%;
     transition: 0.9s;
 }
 .heal:hover {
@@ -188,25 +196,53 @@ button{
 
 
   .jupiter{
-      background-image: url('../images/zeus1.PNG');
-      background-position: center;
+    background-image: url('../images/jupiter1.PNG');
+    background-position: center;
     background-size: cover; 
+    transition: 0.9s;
+  }
+  .jupiter:hover{
+    background-image: url('../images/zeus1.PNG');
+    background-position: center;
+    background-size: cover; 
+    transition: 0.9s;
   }
   .mercury{
     background-image: url('../images/mercury1.PNG');
     background-position: center;
     background-size: cover; 
+    transition: 0.9s;
+  }
+  .mercury:hover{
+    background-image: url('../images/hermes1.PNG');
+    background-position: center;
+    background-size: cover; 
+    transition: 0.9s;
   }
   .pluto{
     background-image: url('../images/pluto1.PNG');
     background-position: center;
     background-size: cover; 
+    transition: 0.9s;
+  }
+  .pluto:hover{
+    background-image: url('../images/hades1.PNG');
+    background-position: center;
+    background-size: cover; 
+    transition: 0.9s;
   }
   /* ..............heroes................. */
   .venus{
     background-image: url('../images/athena1.PNG');
     background-position: center;
     background-size: cover; 
+    transition: 0.9s;
+  }
+  .venus:hover{
+    background-image: url('../images/venus1.PNG');
+    background-position: center;
+    background-size: cover;
+    transition: 0.9s; 
   }
   .mars{
     background-image: url('../images/ares1.PNG');
@@ -224,4 +260,11 @@ button{
     background-image: url('../images/neptune1.PNG');
     background-position: center;
     background-size: cover; 
+    transition: 0.9s;
+  }
+  .neptune:hover{
+    background-image: url('../images/posidon1.PNG');
+    background-position: center;
+    background-size: cover; 
+    transition: 0.9s;
   }

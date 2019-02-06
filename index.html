@@ -8,37 +8,46 @@
     <title>Battle Stone</title>
 </head>
 <body>
-    <h1>Let The Battle Begin!!!</h1>
+    <!-- <h1>Let The Battle Begin!!!</h1> -->
     <div class="vsNames">
         <p class="p1"></p>
-        <span class="midvs">reset</span>
+        <!-- <span class="midvs">reset</span> -->
         <p class="p2"></p> 
     </div>
 
-    <div class="actionButtons">
+    <!-- <div class="actionButtons">
         <button class="attack">Attack!</button>
         <button class="heal">Heal!</button>
-    </div>
+    </div> -->
     
 
     <div class="top-deck">
 
 
-        <div class="test heroA">
-            <h2>jupiter</h2>
+        <div class="test">
+            <h2>Jupiter</h2>
             <div class="top-image jupiter"></div>
+            <ul class="heroUl">
+                <li class="hpTopJupiter">hp: </li>
+            </ul>
             <!-- <button class="attack hercules">Attack!</button>
             <button class="heal">Heal!</button> -->
         </div>
         <div class="test">
             <h2>Mercury</h2>
             <div class="top-image mercury"></div>
+            <ul class="heroUl">
+                    <li class="hpTopMercury">hp: </li>
+                </ul>
             <!-- <button class="attack">Attack!</button>
             <button class="heal">Heal!</button> -->
         </div>
         <div class="test">
             <h2>Pluto</h2>
             <div class="top-image pluto"></div>
+            <ul class="heroUl">
+                    <li class="hpTopPluto">hp: </li>
+                </ul>
             <!-- <button class="attack">Attack!</button>
             <button class="heal">Heal!</button> -->
         </div>
@@ -48,16 +57,20 @@
     <!-- ..................................................................... -->
     <div class="board">
         <div>
-            <h3>Top Team</h3>
+            <h3 class="nameTop">Top Team</h3>
             <ul>
                 <li class="hpTop">Health: </li>
                 <li class="strTop">Strength: </li>
                 <li class="intTop">Mana: </li>
             </ul>
         </div>
-        <button id="startGame"></button>
+        <div class="actionButtons">
+            <button id="startGame"></button>
+            <button class="attack">Attack!</button>
+            <button class="heal">Heal!</button>
+        </div>
         <div>
-            <h3>Bottom Team</h3>
+            <h3 class="nameBottom">Bottom Team</h3>
             <ul>
                 <li class="hpBottom"> :Health</li>
                 <li class="strBottom"> :Strength</li>
@@ -73,18 +86,27 @@
          <div class="test">
             <h2>Venus</h2>
             <div class="bottom-image venus"></div>
+                <ul class="heroUl">
+                    <li class="hpBottomVenus">hp: </li>
+                </ul>
             <!-- <button class="attack">Attack!</button>
             <button class="heal">Heal!</button> -->
         </div>
         <div class="test">
             <h2>Mars</h2>
             <div class="bottom-image mars"></div>
+                <ul class="heroUl">
+                    <li class="hpBottomMars">hp: </li>
+                </ul>
             <!-- <button class="attack">Attack!</button>
             <button class="heal">Heal!</button> -->
         </div>
         <div class="test">
             <h2>Neptune</h2>
             <div class="bottom-image neptune"></div>
+                <ul class="heroUl">
+                    <li class="hpBottomNeptune">hp: </li>
+                </ul>
             <!-- <button class="attack">Attack!</button>
             <button class="heal">Heal!</button> -->
         </div>
