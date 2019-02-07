@@ -8,7 +8,7 @@ let bottomCards = $(".bottom-image");
 let attacker = $(".attack");
 let healer = $(".heal");
 let start = $("#startGame");
-start.toggleClass(".attack");
+// start.toggleClass(".attack");
 // ...............................................
     let showTopName = $(".nameTop");
     let showTopHp = $(".hpTop");
@@ -76,10 +76,12 @@ function attack(){
     // }
     heroReceiving.receiveDamage(heroGiving.strength)
     // heroGiving.defeated(heroReceiving.health);
+    
     $('.top-image, .bottom-image').removeClass('attacker receiver receiverhp');
     $('.' + heroGiving.name).addClass('attacker');
     $('.' + heroReceiving.name).addClass('receiver');
-    //modifies the center info stats
+    
+    //shows the center info stats
     showTopName.html(heroGiving.name);
     showTopHp.html("health: " + heroGiving.health);
     showTopStr.html("strenght: " + heroGiving.strength);
@@ -87,16 +89,21 @@ function attack(){
     showBottomName.html(heroReceiving.name);
     showBottomHp.html(heroReceiving.health + " :health");
     showBottomStr.html(heroReceiving.strength + " :strenght");
-    showBottomInt.html(heroReceiving.mana + " :mana");  
+    showBottomInt.html(heroReceiving.mana + " :mana"); 
+    //switches turn on attack 
+    
     // shows the hp of the individual player and modifies it
     for(let i =0; i<warBoard.length; i++){
         for(let j=0; j<warBoard[i].length; j++){
             $(".hpTop" + warBoard[i][j].name).html('HP:      ' +warBoard[i][j].health)
             $(".hpBottom" + warBoard[i][j].name).html('HP: ' +warBoard[i][j].health)
-            console.log(warBoard[i][j].name + warBoard[i][j].strength)
+            // console.log(warBoard[i][j].name + warBoard[i][j].strength)
         };
     };
     defeated(heroReceiving.health)
+    // setTimeout(()=>{fight()},1000)
+    turn = 1 - turn;
+     heroGiving = warBoard[turn][Math.floor(Math.random() * warBoard[turn].length)];
 };
 
 function defeated(life){
@@ -110,7 +117,8 @@ function defeated(life){
             if(enemy.name === heroReceiving.name){
                 warBoard[1-turn].splice(i,1)
                 if(warBoard[1-turn].length === 0){
-                    alert('game over')
+                    //alert('game over')
+                    $('body').toggleClass('endGame')
                 };
             };
         })
@@ -126,6 +134,7 @@ function heal(){
     }
     heroReceiving = warBoard[otherTeam][Math.floor(Math.random() * warBoard[turn].length)]; 
     console.log(heroGiving, ' heals ', heroReceiving);
+    
     //healing action
     heroReceiving.receiveHealth(heroGiving.mana)
     //modifies the top image with attack/heal action
@@ -141,6 +150,9 @@ function heal(){
     showBottomHp.html(heroReceiving.health + " :health");
     showBottomStr.html(heroReceiving.strength + " :strenght");
     showBottomInt.html(heroReceiving.mana + " :mana");
+    //switches turn on attack
+    turn = 1 - turn;
+     heroGiving = warBoard[turn][Math.floor(Math.random() * warBoard[turn].length)];
     //show individual hp below characters
     for(let i =0; i<warBoard.length; i++){
         for(let j=0; j<warBoard[i].length; j++){
@@ -149,22 +161,31 @@ function heal(){
         };
     };
     // end
+    
+    // setTimeout(()=>{fight()},1000)
+
 };
 
 
 attacker.on("click", attack);
 healer.on("click", heal);
-start.on("click", fight);
+start.on("click", ()=>{
+    fight();
+    $('#startGame').hide()
+});
 
 document.body.onkeyup = function(e){
     if(e.keyCode == 32){
         console.log('spacebar')
-        fight();
+        // fight();
+            fight();
+            $('#startGame').hide()
+        
     }else if(e.keyCode == 65){
-        console.log('attaking')
+        console.log('A')
         attack();
     }else if(e.keyCode == 68){
-        console.log('healing')
+        console.log('D')
         heal();
     };
 };
