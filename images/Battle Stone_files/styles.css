@@ -1,0 +1,293 @@
+
+body{
+    background-image: url('../images/scroll.jpg');
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-size: cover;
+    font-family: Papyrus,fantasy; 
+    font-weight: 600;
+}
+.endGame{
+    background-image: url('../images/purple-orb.gif');
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-size: cover;
+    font-family: Papyrus,fantasy; 
+    font-weight: 600;
+    color: white;
+}
+h1{
+    text-align: center;
+    font-family: Papyrus, fantasy; 
+    /* color: burlywood; */
+    color: floralwhite;
+}
+.vsNames{
+    display: flex;
+    justify-content: space-around;
+    height: 40px;
+}
+.vs1{
+    background-color: red
+}
+/* .midvs{
+
+} */
+.vs2{
+    color: blue;
+}
+h2{
+    margin: 0px;
+}
+.top-deck{
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+}
+.top-image{
+    width: 150px;
+    height: 100px;
+    /* background-color: lightgrey;
+    background-image: url('../images/hero.jpg');
+    background-position: center;
+    background-size: cover;  */
+    border-radius: 12px;
+    transition: 0.5s;
+}
+.top-image:hover{
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+.heroUl{
+    list-style-type: none;
+    padding-left: 0px;
+    margin: 0px;
+}
+.heroUl li{
+    display: inline-block;
+}
+
+
+.board{
+    display: flex;
+    /* justify-content: space-around; */
+    justify-content: space-evenly;
+    align-items: center;
+    height: 30%;
+    width: 100%;
+    /* background-color: darkgreen; */
+}
+#startGame{
+    height: 40%;
+    width: 100%;
+    margin: auto 0px;
+    padding: 0px;
+    background-image: url('../images/start.gif');
+    background-position: center;
+    background-size: cover; 
+    border-style: none;
+    border-radius: 50px;
+    transition: 1s;
+}
+#startGame:hover{
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    background-image: url('../images/plasma.gif');
+    background-position: center;
+    background-size: cover; 
+}
+.board ul{
+    list-style-type: none;
+    padding-left: 0px; 
+}
+.board li{
+    font-size:20px;
+}
+
+.test{
+    /* display: flex;
+    flex-direction: column; */
+    margin-bottom: 0px;
+}
+.bottom-deck{
+    display: flex; 
+    justify-content: space-around;
+    text-align: center;
+}
+.bottom-image{
+    width: 150px;
+    height: 100px;
+    background-image: url('../images/hero.jpg');
+    background-position: center;
+    background-size: cover; 
+    border-radius: 12px;
+    transition: 0.5s;
+}
+
+.bottom-image:hover{
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+/* .................    buttons ...................... */
+button{
+    /* height: 30px;
+    width: 25%; */
+    color: white;
+}
+.actionButtons{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0px;
+    width: 20%;
+}
+.attack{
+    border-radius: 12px;
+    background-color: rgba(67, 8, 228, 0.9);
+    border-style: none;
+    height: 20%;
+    transition: 1.5s;
+}
+.attack:hover {
+    /* background-color: red;  */
+    background-image: url('../images/purple-energy.gif');
+    background-position: center;
+    background-size: cover; 
+    color: white;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+  }
+.heal{
+    border-radius: 12px;
+    background-color: lightgreen;
+    border-style: none;
+    height: 20%;
+    transition: 1.9s;
+}
+.heal:hover {
+    /* background-color: green;  */
+    background-image: url('../images/greenborder.gif');
+    color: white;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+  }
+
+
+
+
+
+
+
+.jupiter{
+background-image: url('../images/jupiter1.PNG');
+background-position: center;
+background-size: cover; 
+transition: 0.9s;
+}
+.jupiter:hover{
+background-image: url('../images/dog3.gif');
+/* background-image: url('../images/zeus1.PNG'); */
+background-position: center;
+background-size: cover; 
+transition: 0.9s;
+}
+.mercury{
+background-image: url('../images/mercury1.PNG');
+background-position: center;
+background-size: cover; 
+transition: 0.9s;
+}
+
+
+.mercury:hover{
+background-image: url('../images/dog2.gif');
+/* background-image: url('../images/hermes1.PNG'); */
+background-position: center;
+background-size: cover; 
+transition: 0.9s;
+}
+.pluto{
+background-image: url('../images/pluto1.PNG');
+background-position: center;
+background-size: cover; 
+transition: 0.9s;
+}
+.pluto:hover{
+background-image: url('../images/dog1.gif');
+/* background-image: url('../images/hades1.PNG'); */
+background-position: center;
+background-size: cover; 
+transition: 0.9s;
+}
+/* ..............heroes................. */
+.venus{
+background-image: url('../images/athena1.PNG');
+background-position: center;
+background-size: cover; 
+transition: 0.9s;
+}
+.venus:hover{
+background-image: url('../images/cat3.gif');
+/* background-image: url('../images/venus1.PNG'); */
+background-position: center;
+background-size: cover;
+transition: 0.9s; 
+}
+.mars{
+background-image: url('../images/ares1.PNG');
+background-position: center;
+background-size: cover; 
+transition: 0.9s;
+}
+.mars:hover{
+background-image: url('../images/cat2.gif');
+/* background-image: url('../images/mars1.PNG'); */
+background-position: center;
+background-size: cover; 
+transition: 0.9s;
+}
+.neptune{
+background-image: url('../images/neptune1.PNG');
+background-position: center;
+background-size: cover; 
+transition: 0.9s;
+}
+.neptune:hover{
+background-image: url('../images/cat1.gif');
+/* background-image: url('../images/posidon1.PNG'); */
+background-position: center;
+background-size: cover; 
+transition: 0.9s;
+}
+
+.rip{
+    background-image: url('../images/skully.gif');
+    background-position: center;
+    background-size: cover; 
+    transition: 1.9s;
+  }
+
+
+  .attacker {
+    /* border: 5px solid yellow; */
+    box-shadow: 0 20px 26px 0 rgba(67, 8, 228, 0.9);
+    width: 250px;
+    height: 130px;
+    background-image: url('../images/paladin.gif');
+    background-position: center;
+    background-size: cover; 
+}
+
+.receiver {
+    /* border: 3px solid red; */
+    border: 5px solid transparent;
+    padding: 15px;
+    width: 250px;
+    height: 100px;
+    border-image: url('../images/fire.gif') 30 round;
+    
+}
+.receiverhp {
+    /* border: 13px solid green; */
+  border: 5px solid transparent;
+  padding: 15px;
+  width: 250px;
+  height: 100px;
+  border-image: url('../images/greenborder.gif') 30 round;
+  border-radius: 12px;
+}

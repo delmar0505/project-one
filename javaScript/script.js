@@ -75,12 +75,10 @@ function attack(){
     //     return
     // }
     heroReceiving.receiveDamage(heroGiving.strength)
-    // heroGiving.defeated(heroReceiving.health);
     
     $('.top-image, .bottom-image').removeClass('attacker receiver receiverhp');
     $('.' + heroGiving.name).addClass('attacker');
     $('.' + heroReceiving.name).addClass('receiver');
-    
     //shows the center info stats
     showTopName.html(heroGiving.name);
     showTopHp.html("health: " + heroGiving.health);
@@ -90,18 +88,17 @@ function attack(){
     showBottomHp.html(heroReceiving.health + " :health");
     showBottomStr.html(heroReceiving.strength + " :strenght");
     showBottomInt.html(heroReceiving.mana + " :mana"); 
-    //switches turn on attack 
-    
     // shows the hp of the individual player and modifies it
     for(let i =0; i<warBoard.length; i++){
         for(let j=0; j<warBoard[i].length; j++){
-            $(".hpTop" + warBoard[i][j].name).html('HP:      ' +warBoard[i][j].health)
+            $(".hpTop" + warBoard[i][j].name).html('HP: ' +warBoard[i][j].health)
             $(".hpBottom" + warBoard[i][j].name).html('HP: ' +warBoard[i][j].health)
             // console.log(warBoard[i][j].name + warBoard[i][j].strength)
         };
     };
     defeated(heroReceiving.health)
     // setTimeout(()=>{fight()},1000)
+    //switches turn on attack 
     turn = 1 - turn;
      heroGiving = warBoard[turn][Math.floor(Math.random() * warBoard[turn].length)];
 };
@@ -156,14 +153,12 @@ function heal(){
     //show individual hp below characters
     for(let i =0; i<warBoard.length; i++){
         for(let j=0; j<warBoard[i].length; j++){
-            $(".hpTop" + warBoard[i][j].name).html('HP:      ' +warBoard[i][j].health)
+            $(".hpTop" + warBoard[i][j].name).html('HP: ' +warBoard[i][j].health)
             $(".hpBottom" + warBoard[i][j].name).html('HP: ' +warBoard[i][j].health)
         };
     };
     // end
-    
     // setTimeout(()=>{fight()},1000)
-
 };
 
 
@@ -177,7 +172,6 @@ start.on("click", ()=>{
 document.body.onkeyup = function(e){
     if(e.keyCode == 32){
         console.log('spacebar')
-        // fight();
             fight();
             $('#startGame').hide()
         
@@ -186,6 +180,12 @@ document.body.onkeyup = function(e){
         attack();
     }else if(e.keyCode == 68){
         console.log('D')
+        heal();
+    }else if(e.keyCode == 75){
+        console.log('K')
+        attack();
+    }else if(e.keyCode == 76){
+        console.log('L')
         heal();
     };
 };

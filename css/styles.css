@@ -28,7 +28,7 @@ h1{
     height: 40px;
 }
 .vs1{
-    color: red
+    background-color: red
 }
 /* .midvs{
 
@@ -47,10 +47,10 @@ h2{
 .top-image{
     width: 150px;
     height: 100px;
-    background-color: lightgrey;
+    /* background-color: lightgrey;
     background-image: url('../images/hero.jpg');
     background-position: center;
-    background-size: cover; 
+    background-size: cover;  */
     border-radius: 12px;
     transition: 0.5s;
 }
@@ -65,25 +65,7 @@ h2{
 .heroUl li{
     display: inline-block;
 }
-.attacker {
-    /* border: 5px solid yellow; */
-    box-shadow: 0 20px 26px 0 rgba(67, 8, 228, 0.9), 0 17px 50px 0 rgba(198, 201, 42, 0.90);
-}
 
-.receiver {
-    /* border: 3px solid red; */
-    border: 5px solid transparent;
-    padding: 15px;
-    border-image: url(../images/fire.gif) 30 round;
-    
-}
-.receiverhp {
-    /* border: 13px solid green; */
-  border: 5px solid transparent;
-  padding: 15px;
-  border-image: url(../images/greenborder.gif) 30 round;
-  border-radius: 12px;
-}
 
 .board{
     display: flex;
@@ -99,17 +81,18 @@ h2{
     width: 100%;
     margin: auto 0px;
     padding: 0px;
-    background-image: url(../images/start.gif);
+    background-image: url('../images/start.gif');
     background-position: center;
     background-size: cover; 
     border-style: none;
-    border-radius: 12px;
-    transition: 0.5s;
-    
+    border-radius: 50px;
+    transition: 1s;
 }
 #startGame:hover{
     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
-    width: 150%;
+    background-image: url('../images/plasma.gif');
+    background-position: center;
+    background-size: cover; 
 }
 .board ul{
     list-style-type: none;
@@ -160,11 +143,13 @@ button{
     background-color: rgba(67, 8, 228, 0.9);
     border-style: none;
     height: 20%;
-    transition: 0.5s;
+    transition: 1.5s;
 }
 .attack:hover {
     /* background-color: red;  */
-    background-image: url(../images/fire.gif);
+    background-image: url('../images/purple-energy.gif');
+    background-position: center;
+    background-size: cover; 
     color: white;
     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
   }
@@ -173,11 +158,11 @@ button{
     background-color: lightgreen;
     border-style: none;
     height: 20%;
-    transition: 0.9s;
+    transition: 1.9s;
 }
 .heal:hover {
     /* background-color: green;  */
-    background-image: url(../images/greenborder.gif);
+    background-image: url('../images/greenborder.gif');
     color: white;
     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
   }
@@ -195,7 +180,8 @@ background-size: cover;
 transition: 0.9s;
 }
 .jupiter:hover{
-background-image: url('../images/zeus1.PNG');
+background-image: url('../images/dog3.gif');
+/* background-image: url('../images/zeus1.PNG'); */
 background-position: center;
 background-size: cover; 
 transition: 0.9s;
@@ -206,8 +192,11 @@ background-position: center;
 background-size: cover; 
 transition: 0.9s;
 }
+
+
 .mercury:hover{
-background-image: url('../images/hermes1.PNG');
+background-image: url('../images/dog2.gif');
+/* background-image: url('../images/hermes1.PNG'); */
 background-position: center;
 background-size: cover; 
 transition: 0.9s;
@@ -219,7 +208,8 @@ background-size: cover;
 transition: 0.9s;
 }
 .pluto:hover{
-background-image: url('../images/hades1.PNG');
+background-image: url('../images/dog1.gif');
+/* background-image: url('../images/hades1.PNG'); */
 background-position: center;
 background-size: cover; 
 transition: 0.9s;
@@ -232,7 +222,8 @@ background-size: cover;
 transition: 0.9s;
 }
 .venus:hover{
-background-image: url('../images/venus1.PNG');
+background-image: url('../images/cat3.gif');
+/* background-image: url('../images/venus1.PNG'); */
 background-position: center;
 background-size: cover;
 transition: 0.9s; 
@@ -244,7 +235,8 @@ background-size: cover;
 transition: 0.9s;
 }
 .mars:hover{
-background-image: url('../images/mars1.PNG');
+background-image: url('../images/cat2.gif');
+/* background-image: url('../images/mars1.PNG'); */
 background-position: center;
 background-size: cover; 
 transition: 0.9s;
@@ -256,7 +248,8 @@ background-size: cover;
 transition: 0.9s;
 }
 .neptune:hover{
-background-image: url('../images/posidon1.PNG');
+background-image: url('../images/cat1.gif');
+/* background-image: url('../images/posidon1.PNG'); */
 background-position: center;
 background-size: cover; 
 transition: 0.9s;
@@ -270,3 +263,31 @@ transition: 0.9s;
   }
 
 
+  .attacker {
+    /* border: 5px solid yellow; */
+    box-shadow: 0 20px 26px 0 rgba(67, 8, 228, 0.9);
+    width: 250px;
+    height: 130px;
+    background-image: url('../images/paladin.gif');
+    background-position: center;
+    background-size: cover; 
+}
+
+.receiver {
+    /* border: 3px solid red; */
+    border: 5px solid transparent;
+    padding: 15px;
+    width: 250px;
+    height: 100px;
+    border-image: url('../images/fire.gif') 30 round;
+    
+}
+.receiverhp {
+    /* border: 13px solid green; */
+  border: 5px solid transparent;
+  padding: 15px;
+  width: 250px;
+  height: 100px;
+  border-image: url('../images/greenborder.gif') 30 round;
+  border-radius: 12px;
+}
