@@ -19,10 +19,10 @@ let showBottomHp = $(".hpBottom");
 let showBottomStr = $(".strBottom");
 let showBottomInt = $(".intBottom");
 // ...............................................
-// let vs1 = $(".p1");
-// vs1.html('p1: ' + prompt("player 1 enter name")); 
-// let vs2 = $(".p2");
-// vs2.html(prompt("player 2 enter name") + ' :p2'); 
+let vs1 = $(".p1");
+vs1.html('p1: ' + prompt("player 1 enter name")); 
+let vs2 = $(".p2");
+vs2.html(prompt("player 2 enter name") + ' :p2'); 
 
 let turn = 0;
 let otherTeam = 0;
@@ -91,8 +91,8 @@ function attack(){
     // shows the hp of the individual player and modifies it
     for(let i =0; i<warBoard.length; i++){
         for(let j=0; j<warBoard[i].length; j++){
-            $(".hpTop" + warBoard[i][j].name).html('HP: ' +warBoard[i][j].health)
-            $(".hpBottom" + warBoard[i][j].name).html('HP: ' +warBoard[i][j].health)
+            $(".hpTop" + warBoard[i][j].name).html('HP: ' + warBoard[i][j].health + ' ' +  'dmg: ' + warBoard[i][j].strength + ' ' +  'mana: ' +warBoard[i][j].mana)
+            $(".hpBottom" + warBoard[i][j].name).html('HP: ' + warBoard[i][j].health + ' ' +  'dmg: ' + warBoard[i][j].strength + ' ' +  'mana: ' +warBoard[i][j].mana)
             // console.log(warBoard[i][j].name + warBoard[i][j].strength)
         };
     };
