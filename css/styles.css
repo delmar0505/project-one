@@ -51,6 +51,7 @@ h2{
 .heroUl{
     list-style-type: none;
     padding-left: 0px;
+    margin: 0px;
 }
 .heroUl li{
     display: inline-block;
@@ -108,24 +109,7 @@ h2{
 .board li{
     font-size:20px;
 }
-/* .hpTop{
-    
-}
-.strTop{
 
-}
-.intTop{
-
-}
-.hpBottom{
-    
-}
-.strBottom{
-
-}
-.intBottom{
-
-} */
 .test{
     /* display: flex;
     flex-direction: column; */
@@ -195,76 +179,85 @@ button{
 
 
 
-  .jupiter{
-    background-image: url('../images/jupiter1.PNG');
+.jupiter{
+background-image: url('../images/jupiter1.PNG');
+background-position: center;
+background-size: cover; 
+transition: 0.9s;
+}
+.jupiter:hover{
+background-image: url('../images/zeus1.PNG');
+background-position: center;
+background-size: cover; 
+transition: 0.9s;
+}
+.mercury{
+background-image: url('../images/mercury1.PNG');
+background-position: center;
+background-size: cover; 
+transition: 0.9s;
+}
+.mercury:hover{
+background-image: url('../images/hermes1.PNG');
+background-position: center;
+background-size: cover; 
+transition: 0.9s;
+}
+.pluto{
+background-image: url('../images/pluto1.PNG');
+background-position: center;
+background-size: cover; 
+transition: 0.9s;
+}
+.pluto:hover{
+background-image: url('../images/hades1.PNG');
+background-position: center;
+background-size: cover; 
+transition: 0.9s;
+}
+/* ..............heroes................. */
+.venus{
+background-image: url('../images/athena1.PNG');
+background-position: center;
+background-size: cover; 
+transition: 0.9s;
+}
+.venus:hover{
+background-image: url('../images/venus1.PNG');
+background-position: center;
+background-size: cover;
+transition: 0.9s; 
+}
+.mars{
+background-image: url('../images/ares1.PNG');
+background-position: center;
+background-size: cover; 
+transition: 0.9s;
+}
+.mars:hover{
+background-image: url('../images/mars1.PNG');
+background-position: center;
+background-size: cover; 
+transition: 0.9s;
+}
+.neptune{
+background-image: url('../images/neptune1.PNG');
+background-position: center;
+background-size: cover; 
+transition: 0.9s;
+}
+.neptune:hover{
+background-image: url('../images/posidon1.PNG');
+background-position: center;
+background-size: cover; 
+transition: 0.9s;
+}
+
+.rip{
+    background-image: url('../images/skully.gif');
     background-position: center;
     background-size: cover; 
-    transition: 0.9s;
+    transition: 1.9s;
   }
-  .jupiter:hover{
-    background-image: url('../images/zeus1.PNG');
-    background-position: center;
-    background-size: cover; 
-    transition: 0.9s;
-  }
-  .mercury{
-    background-image: url('../images/mercury1.PNG');
-    background-position: center;
-    background-size: cover; 
-    transition: 0.9s;
-  }
-  .mercury:hover{
-    background-image: url('../images/hermes1.PNG');
-    background-position: center;
-    background-size: cover; 
-    transition: 0.9s;
-  }
-  .pluto{
-    background-image: url('../images/pluto1.PNG');
-    background-position: center;
-    background-size: cover; 
-    transition: 0.9s;
-  }
-  .pluto:hover{
-    background-image: url('../images/hades1.PNG');
-    background-position: center;
-    background-size: cover; 
-    transition: 0.9s;
-  }
-  /* ..............heroes................. */
-  .venus{
-    background-image: url('../images/athena1.PNG');
-    background-position: center;
-    background-size: cover; 
-    transition: 0.9s;
-  }
-  .venus:hover{
-    background-image: url('../images/venus1.PNG');
-    background-position: center;
-    background-size: cover;
-    transition: 0.9s; 
-  }
-  .mars{
-    background-image: url('../images/ares1.PNG');
-    background-position: center;
-    background-size: cover; 
-    transition: 0.9s;
-  }
-  .mars:hover{
-    background-image: url('../images/mars1.PNG');
-    background-position: center;
-    background-size: cover; 
-    transition: 0.9s;
-  }
-  .neptune{
-    background-image: url('../images/neptune1.PNG');
-    background-position: center;
-    background-size: cover; 
-    transition: 0.9s;
-  }
-  .neptune:hover{
-    background-image: url('../images/posidon1.PNG');
-    background-position: center;
-    background-size: cover; 
-    transition: 0.9s;
-  }
+
+
