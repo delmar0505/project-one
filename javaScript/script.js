@@ -45,15 +45,15 @@ class Hero{
 };
 let warBoard = [
     [ 
-    new Hero ('Jupiter', 800, 85, 75, 1),
+    new Hero ('Jupiter', 650, 85, 75, 1),
     new Hero ('Mercury', 500, 120, 80, 1),
-    new Hero ('Pluto', 700, 95, 50 ,1),
+    new Hero ('Pluto', 600, 95, 50 ,1),
     
     ],
     [
-    new Hero ('Venus', 700, 95, 50, 2),
+    new Hero ('Venus', 600, 95, 50, 2),
     new Hero ('Mars', 500, 120, 80, 2),
-    new Hero ('Neptune', 800, 85, 75, 2)
+    new Hero ('Neptune', 650, 85, 75, 2)
     ]
 ];
 function fight(){
@@ -70,15 +70,30 @@ function attack(){
     }
     heroReceiving = warBoard[otherTeam][Math.floor(Math.random() * warBoard[otherTeam].length)]; 
     console.log(heroGiving, ' attacks ',heroReceiving);
+
+    console.log($('.'+heroGiving.name).offset())
+    hg = $('.'+heroGiving.name).offset()
+    hr = $('.'+heroReceiving.name).offset()
+
+    $('svg').remove()
+    $('body').append(`<svg><line x1="${hg.left}" y1="${hg.top}" x2="${hr.left}" y2="${hr.top}"/></svg>`)
+
     // no clue what this does
     // if(!heroReceiving){
     //     return
     // }
     heroReceiving.receiveDamage(heroGiving.strength)
     
-    $('.top-image, .bottom-image').removeClass('attacker receiver receiverhp');
-    $('.' + heroGiving.name).addClass('attacker');
+    $('.top-image, .bottom-image').removeClass('paladin slash receiver receiverhp');
+    // $('.' + heroGiving.name).addClass('attacker');
     $('.' + heroReceiving.name).addClass('receiver');
+    if($('.' + heroGiving.name).hasClass('top-image')){
+        $('.' + heroGiving.name).addClass('slash');
+    }else if($('.' + heroGiving.name).hasClass('bottom-image')){
+        $('.' + heroGiving.name).addClass('slash');
+    }
+
+
     //shows the center info stats
     showTopName.html(heroGiving.name);
     showTopHp.html("health: " + heroGiving.health);
@@ -132,12 +147,26 @@ function heal(){
     heroReceiving = warBoard[otherTeam][Math.floor(Math.random() * warBoard[turn].length)]; 
     console.log(heroGiving, ' heals ', heroReceiving);
     
+    // console.log($('.'+heroGiving.name).offset())
+    // hg = $('.'+heroGiving.name).offset()
+    // hr = $('.'+heroReceiving.name).offset()
+
+    $('svg').remove()
+    // $('body').append(`<svg><line x1="${hg.left}" y1="${hg.top}" x2="${hr.left}" y2="${hr.top}"/></svg>`)
+
+
     //healing action
     heroReceiving.receiveHealth(heroGiving.mana)
     //modifies the top image with attack/heal action
-    $('.top-image, .bottom-image').removeClass('attacker receiver receiverhp');
-    $('.' + heroGiving.name).addClass('attacker');
+    $('.top-image, .bottom-image').removeClass('paladin slash receiver receiverhp');
+    // $('.' + heroGiving.name).addClass('attacker');
     $('.' + heroReceiving.name).addClass('receiverhp');
+    if($('.' + heroGiving.name).hasClass('top-image')){
+        $('.' + heroGiving.name).addClass('paladin');
+    }else if($('.' + heroGiving.name).hasClass('bottom-image')){
+        $('.' + heroGiving.name).addClass('paladin');
+    }
+
     //show stats in the middle
     showTopName.html(heroGiving.name);
     showTopHp.html("health: " + heroGiving.health);

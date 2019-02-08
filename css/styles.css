@@ -27,9 +27,9 @@ h1{
     justify-content: space-around;
     height: 40px;
 }
-.vs1{
+/* .vs1{
     background-color: red
-}
+} */
 /* .midvs{
 
 } */
@@ -47,10 +47,10 @@ h2{
 .top-image{
     width: 150px;
     height: 100px;
-    /* background-color: lightgrey;
+    background-color: lightgrey;
     background-image: url('../images/hero.jpg');
     background-position: center;
-    background-size: cover;  */
+    background-size: cover; 
     border-radius: 12px;
     transition: 0.5s;
 }
@@ -263,7 +263,8 @@ transition: 0.9s;
   }
 
 
-  .attacker {
+
+.paladin {
     /* border: 5px solid yellow; */
     box-shadow: 0 20px 26px 0 rgba(67, 8, 228, 0.9);
     width: 250px;
@@ -272,6 +273,32 @@ transition: 0.9s;
     background-position: center;
     background-size: cover; 
 }
+.slash {
+    /* border: 5px solid yellow; */
+    box-shadow: 0 20px 26px 0 rgba(67, 8, 228, 0.9);
+    width: 250px;
+    height: 130px;
+    background-image: url('../images/attacking.gif');
+    background-position: center;
+    background-size: cover; 
+}
+.plasma {
+    /* border: 5px solid yellow; */
+    box-shadow: 0 20px 26px 0 rgba(67, 8, 228, 0.9);
+    width: 250px;
+    height: 130px;
+    background-image: url('../images/plasma.gif');
+    background-position: center;
+    background-size: cover; 
+}
+/* .attacker {
+    box-shadow: 0 20px 26px 0 rgba(67, 8, 228, 0.9);
+    width: 250px;
+    height: 130px;
+    background-image: url('../images/paladin.gif');
+    background-position: center;
+    background-size: cover; 
+} */
 
 .receiver {
     /* border: 3px solid red; */
@@ -290,4 +317,42 @@ transition: 0.9s;
   height: 100px;
   border-image: url('../images/greenborder.gif') 30 round;
   border-radius: 12px;
+}
+
+svg{
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    width: 90%;
+    height: 90%;
+    pointer-events: none;
+    transition: all .8s;
+    animation: animateLine 2s forwards;
+}
+
+svg line{
+    animation: animateColor 1s infinite;
+}
+@keyframes animateLine {
+
+    0%{
+        width:0%;
+    }
+    100%{
+        width:90%;
+    }
+}
+@keyframes animateColor {
+
+    0%{
+        stroke: green;
+    }
+    100%{
+        stroke :purple;
+    }
+}
+
+.test{
+    position: relative;
+    z-index: 3;
 }
